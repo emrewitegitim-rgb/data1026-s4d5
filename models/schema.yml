@@ -18,8 +18,9 @@ sources:
             description: priority of the parcel
             tests:
               - not_null
-              - accepted_values:
-                  arguments: ['High', 'Medium', 'Low']
+              - accepted_values: 
+                  arguments:
+                    values:  ['High', 'Medium', 'Low']
         config:
           loaded_at_field: "PARSE_TIMESTAMP('%B %d, %Y', Date_purCHase)"
           freshness:
