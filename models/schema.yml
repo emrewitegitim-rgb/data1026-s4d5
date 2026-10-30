@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: circle
+    schema: circle_data1026
+    description: data from data source circle
+    tables:
+      - name: parcel
+        identifier: raw_cc_parcel
+        description: parcel data for circle logistics
+        columns:
+          - name: Parcel_id
+            description: unique id of the parcel
+            tests:
+              - unique
+              - not_null
+          - name: Priority
+            description: priority of the parcel
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['High', 'Medium', 'Low']
+      - name: parcel_product
+        identifier: raw_cc_parcel_product
+        description: product list in a parcel
+        columns:
+          - name: ParCEL_id
+            description: id of the parcel
+            tests:
+              - not_null
+              
+              
+              
+              
+              
