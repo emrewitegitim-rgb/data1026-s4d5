@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: cc_parcel
+    description: aggregated details for each parcel
